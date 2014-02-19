@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<model package="impart" baseClass="xPDOObject" platform="mysql" defaultEngine="MyISAM" phpdoc-package="impart" version="1.1">
+
+    <object class="impArticle" table="impart_article" extends="xPDOSimpleObject">
+		<field key="pagetitle" dbtype="varchar" precision="255" phptype="string" null="false" default="" />
+		<field key="longtitle" dbtype="varchar" precision="255" phptype="string" null="false" default="" />
+		<field key="content" dbtype="text" phptype="text" null="true" default="" />
+        <field key="parent" dbtype="integer" precision="10" attributes="unsigned" phptype="integer" null="false" default="0" />
+        <field key="alias" dbtype="varchar" precision="255" phptype="string" null="false" default="" />
+        
+		<field key="alias_dublicate" dbtype="tinyint" precision="1" phptype="boolean" attributes="unsigned" null="true" default="0" />
+		<field key="imported" dbtype="tinyint" precision="1" phptype="boolean" attributes="unsigned" null="true" default="0" />
+
+		<index alias="alias_dublicate" name="alias_dublicate" primary="false" unique="false" type="BTREE">
+			<column key="alias_dublicate" length="" collation="A" null="false" />
+		</index>
+		<index alias="active" name="active" primary="false" unique="false" type="BTREE">
+			<column key="imported" length="" collation="A" null="false" />
+		</index>
+	</object>
+
+</model>
