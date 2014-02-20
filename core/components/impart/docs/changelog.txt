@@ -1,5 +1,17 @@
 Changelog for impArt.
 
-impArt 0.0.1
+0.1.0
+==============
+Added check for duplicates when editing 
+Added pop-up message during processing of articles 
+Added check for the length of the headers
+The rules for articles are changed
+AutoCorrect is set up quotes and dashes 
+Added detection in text H2 and H3 
+Added an example design 
+All texts are rendered in glossaries
+
+
+0.0.1
 ==============
 - Initial release.
