@@ -1,5 +1,9 @@
 Changelog for impArt.
 
+0.1.1
+=============
+Added replacing of pagebraker from MS Word
+
 0.1.0
 ==============
 Added check for duplicates when editing 
