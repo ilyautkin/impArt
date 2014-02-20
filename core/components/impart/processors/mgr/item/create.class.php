@@ -26,6 +26,7 @@ class impArtItemCreateProcessor extends modObjectCreateProcessor {
         $articlesList = str_replace('"', '»', $articlesList);
         $articlesList = str_replace(' - ', ' — ', $articlesList);
         $articles = array_filter(explode('#', $articlesList));
+        $articlesList = str_replace(' ', '', $articlesList);
         $objectArr = array();
         $parent = $this->getProperty('parent');
         if ($parentRes = $this->modx->getObject('modResource',$parent)) {
