@@ -25,6 +25,7 @@ class impArtItemCreateProcessor extends modObjectCreateProcessor {
         $articlesList = str_replace(' "', ' «', $this->getProperty('content'));
         $articlesList = str_replace('"', '»', $articlesList);
         $articlesList = str_replace(' - ', ' — ', $articlesList);
+        $articlesList = str_replace(urldecode('%E2%80%83'), '', $articlesList);
         $articles = array_filter(explode('#', $articlesList));
         $objectArr = array();
         $parent = $this->getProperty('parent');
